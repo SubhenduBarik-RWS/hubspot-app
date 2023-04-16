@@ -189,4 +189,4 @@ app.get('/api/emails', async (req, res) => {
     res.send(emails);
 });
 
-app.listen(PORT, () => console.log(`listening on ${PORT}`));
+app.listen(PORT, () => console.log(`listening on ${HOST} ${PORT}`));
