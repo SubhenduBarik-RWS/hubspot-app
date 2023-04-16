@@ -60,7 +60,7 @@ app.get('/api/install', (req, res) => {
     console.log('===> Step 2: User is being prompted for consent by HubSpot');
 });
 
-app.get('/api/oauth-callback', async (req, res) => {
+app.get('/oauth-callback', async (req, res) => {
     console.log('===> Step 3: Handling the request sent by the server');
 
     // Received a user authorization code, so now combine that with the other
@@ -191,4 +191,4 @@ app.get('/api/emails', async (req, res) => {
     res.send(emails);
 });
 
-app.listen(PORT, () => console.log(`listening on ${HOST} ${PORT}`));
+app.listen(PORT, '0.0.0.0', () => console.log(`listening on ${HOST} ${PORT}`));
