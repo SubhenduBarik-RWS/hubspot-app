@@ -8,6 +8,7 @@ var cors = require('cors');
 
 const app = express();
 
+const HOST = process.env.HOST || 'localhost';
 const PORT = process.env.PORT || 8080;
 const CLIENT_ID = '59a080c9-fbbb-4fe4-8b29-344c8768cf08';
 const CLIENT_SECRET = '41492b90-2263-40aa-af44-a4337de28782';
@@ -17,7 +18,7 @@ const accessTokenCache = new NodeCache({ deleteOnExpire: true });
 
 let SCOPES = ['sales-email-read crm.objects.contacts.read crm.objects.marketing_events.read content'];
 
-const REDIRECT_URI = `http://localhost:${PORT}/oauth-callback`;
+const REDIRECT_URI = `http://${HOST}:${PORT}/oauth-callback`;
 
 const authUrl =
     'https://app.hubspot.com/oauth/authorize' +
