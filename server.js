@@ -60,7 +60,7 @@ app.get('/api/install', (req, res) => {
     console.log('===> Step 2: User is being prompted for consent by HubSpot');
 });
 
-app.get('/oauth-callback', async (req, res) => {
+app.get('/api/oauth-callback', async (req, res) => {
     console.log('===> Step 3: Handling the request sent by the server');
 
     // Received a user authorization code, so now combine that with the other
