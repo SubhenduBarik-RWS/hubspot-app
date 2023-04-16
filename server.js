@@ -18,7 +18,7 @@ const accessTokenCache = new NodeCache({ deleteOnExpire: true });
 
 let SCOPES = ['sales-email-read crm.objects.contacts.read crm.objects.marketing_events.read content'];
 
-const REDIRECT_URI = `http://${HOST}:${PORT}/oauth-callback`;
+const REDIRECT_URI = `${HOST === "localhost" ? "http" : "https"}://${HOST}:${PORT}/oauth-callback`;
 
 const authUrl =
     'https://app.hubspot.com/oauth/authorize' +
