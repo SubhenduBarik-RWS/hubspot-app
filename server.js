@@ -20,6 +20,8 @@ let SCOPES = ['sales-email-read crm.objects.contacts.read crm.objects.marketing_
 
 const REDIRECT_URI = `${HOST === "localhost" ? "http" : "https"}://${HOST}:${PORT}/oauth-callback`;
 
+console.log(REDIRECT_URI);
+
 const authUrl =
     'https://app.hubspot.com/oauth/authorize' +
     `?client_id=${encodeURIComponent(CLIENT_ID)}` + // app's client ID
