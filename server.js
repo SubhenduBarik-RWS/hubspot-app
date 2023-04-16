@@ -8,6 +8,7 @@ var cors = require('cors');
 
 const app = express();
 
+console.log(process.env.HOST)
 const HOST = process.env.HOST || 'localhost';
 const PORT = process.env.PORT || 8080;
 const CLIENT_ID = '59a080c9-fbbb-4fe4-8b29-344c8768cf08';
